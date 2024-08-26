@@ -26,14 +26,30 @@
                         <h4>Skills</h4>
                         <div class="skill-wrapper">
                         <ul class="skill-list">
-            <?php 
-            for ($i = 1; $i <= 5; $i++): // 最大5つまで対応
-                $skill_text = get_field('skill_' . $i); // カスタムフィールド名を指定
-                if ($skill_text): ?>
-                    <li><?php echo esc_html($skill_text); ?></li>
-                <?php endif; 
-            endfor; 
-            ?>
+                        <?php
+        // ACFのカスタムフィールドから選択された言語を取得
+        $skills = get_field('skills'); // フィールド名が 'skills' の場合
+        
+        // 使用言語に対応するFontAwesomeのクラス名を設定
+        $icons = array(
+            'HTML' => 'fa-brands fa-html5 fa-4x custom-icon',
+            'CSS' => 'fa-brands fa-css3-alt fa-4x custom-icon',
+            'JavaScript' => 'fa-brands fa-js fa-4x custom-icon',
+            'PHP' => 'fa-brands fa-php fa-4x custom-icon',
+            'wordpress' => 'fa-brands fa-wordpress fa-4x custom-icon',
+        );
+
+        // チェックボックスで選択された言語をループ
+        if( $skills ):
+            foreach( $skills as $skill ):
+                // クラス名が設定されていれば表示
+                if( array_key_exists( $skill, $icons ) ): ?>
+                    <li><i class="<?php echo esc_attr( $icons[$skill] ); ?>"></i></li>
+                <?php
+                endif;
+            endforeach;
+        endif;
+        ?>
         </ul>
                             <?php
                             $github_link = get_field('github_link');

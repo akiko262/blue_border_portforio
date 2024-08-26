@@ -12,7 +12,9 @@
     <header class="header">
         <div class="header-inner">
             <!-- logo画像はdivで囲んでサイズ指定 -->
-             <h1 class="logo"> <img class="logo-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/logo.svg" alt="<?php bloginfo( 'name' );?>"></h1>
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+        <img class="logo-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/logo.svg" alt="<?php bloginfo( 'name' ); ?>">
+    </a>
         <nav>
             <ul class="header-nav-ul">
                 <li><a href="#skills">Skills</a></li>

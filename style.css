@@ -205,13 +205,6 @@ width: 50%;
 margin: 0 auto;
 display: flex;
 justify-content: space-between;
-gap: 10px;
-}
-.skill-list > li {
-  background-color: #276BAA;
-  padding: 0.8rem;
-  border-radius: 8px;
-  color: #fff;
 }
 .accordion-003 {
   width: 80%;
@@ -220,7 +213,9 @@ gap: 10px;
   margin-bottom: 7px;
   border-bottom: 2px solid #d0d0d0;
 }
-
+.fa-brands  {
+  color: #276BAA;
+}
 .accordion-003 summary {
   display: flex;
   justify-content: space-between;
