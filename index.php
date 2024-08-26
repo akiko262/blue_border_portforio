@@ -61,6 +61,12 @@
                 <p>（サンプル）Samira-flowershop</p>
             </div>
             <div class="grid-item">
+                <a href="http://blue-border.lovepop.jp/blue-border-portforio/">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/blue-border-portforio.png" alt="">
+                </a>
+                <p>blue-border-portforio</p>
+            </div>
+            <div class="grid-item">
                 <a href="http://blue-border.lovepop.jp/umitsukikan/"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/umitsukikan.png" alt=""></a>
                 <p>（サンプル）海月館</p>
             </div>
@@ -83,12 +89,7 @@
                 <a href="http://blue-border.lovepop.jp/sneakers/"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/sneakers.png" alt=""></a>
                 <p>（サンプル）Sneakers</p>
             </div>
-            <div class="grid-item">
-                <a href="http://blue-border.lovepop.jp/blue-border-portforio/">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/blue-border-portforio.png" alt="">
-                </a>
-                <p>blue-border-portforio</p></div></div>
-            </div>
+</div>
     </section>
     </div>
     <section id="about">
