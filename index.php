@@ -85,9 +85,9 @@
             </div>
             <div class="grid-item">
                 <a href="http://blue-border.lovepop.jp/blue-border-portforio/">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/blueBorder.png" alt="">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/blue-border-portforio.png" alt="">
                 </a>
-                <p>blue-border-portforio1</p></div></div>
+                <p>blue-border-portforio</p></div></div>
             </div>
     </section>
     </div>

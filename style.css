@@ -177,12 +177,11 @@ align-self: center; /
 word-break: break-all;
 }
 footer {
- height: 50px;
+ height: 30px;
  position: fixed;
  bottom: 0;
  left: 0;
  width: 100%;
- background: #f1f1f1; /* フッターの背景色 */
  padding: 20px;
  text-align: center;
 }
