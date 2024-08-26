@@ -1,0 +1,517 @@
+html {
+  height: 100%;
+}
+.content {
+  flex:1;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body {
+  padding: 0;
+  line-height: 1.5rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  height: 100%;
+}
+filter {
+    margin: 0;
+}
+
+/* イメージのおまじない */
+img {
+    max-width: 100%;
+    height: auto;
+}
+.header-inner{
+max-width: 80%;
+/* 中央寄せにしたいときはmargin-leftとmargin-rightをautoにする */
+margin-left: auto;
+margin-right: auto;
+height: 100%;
+color: #276BAA;
+display: flex;
+justify-content: space-between;
+padding: 0px 20px;
+}
+/* リスト項目のマーカを削除 */
+ol, ul {
+    list-style-type: none;
+  }
+a {
+    text-decoration: none;
+    color: #276BAA;
+}
+.header-nav-ul {
+display:flex;
+justify-content: space-between;
+gap: 20px;
+margin-top: 40px;
+}
+.header-nav-ul > li > a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+h1 {
+    margin: 0;
+}
+.t-message-text-img {
+    object-fit: cover;
+}
+section,
+article {
+      width: calc(100% - 40px);
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+  }
+h2 {
+    color: #276BAA;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+}
+/* Card container */
+.card {
+  border: 1px solid #276BAA;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px; 
+  display: flex; /* 追加 */
+  flex-direction: column; /* 追加 */
+  display: flex; /* 追加 */
+  flex-direction: column; /* 追加 */
+  /* Space between cards */
+}
+
+/* Card image */
+.card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card content */
+.card__content {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Card title */
+.card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Card text */
+.card__text {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+/* Card button */
+.card__button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: auto;
+}
+
+/* Button hover effect */
+.card__button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
+.card__image {
+margin-top: 20px;
+width: 125px;
+height: 125px;
+align-self: center; /
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+.grid-item {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.grid-item > p {
+word-break: break-all;
+}
+footer {
+ height: 50px;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ background: #f1f1f1; /* フッターの背景色 */
+ padding: 20px;
+ text-align: center;
+}
+.footer-copy {
+font-size: 0.7rem;
+color: #276BAA;
+padding: 15px 0 0 0;
+}
+.footer-innner {
+text-align: center;
+width: 100%;
+}
+.fa-brands {
+  margin-top: 10px;
+}
+.custom-icon {
+  color: #555;
+}
+.skill-list {
+width: 50%;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+gap: 10px;
+}
+.skill-list > li {
+  background-color: #276BAA;
+  padding: 0.8rem;
+  border-radius: 8px;
+  color: #fff;
+}
+.accordion-003 {
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 7px;
+  border-bottom: 2px solid #d0d0d0;
+}
+
+.accordion-003 summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1em 2em;
+  color: #333333;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accordion-003 summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-003 summary::after {
+  transform: translateY(-25%) rotate(45deg);
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-bottom: 3px solid #333333b3;
+  border-right: 3px solid #333333b3;
+  content: '';
+  transition: transform .3s;
+}
+
+.accordion-003[open] summary::after {
+  transform: rotate(225deg);
+}
+
+.accordion-003 p {
+  transform: translateY(-10px);
+  opacity: 0;
+  margin: 0;
+  padding: .3em 2em 1.5em;
+  color: #333333;
+  transition: transform .5s, opacity .5s;
+}
+
+.accordion-003[open] p {
+  transform: none;
+  opacity: 1;
+}
+h3 {
+  padding:0 .4em .2em;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.about-h3,
+.single-h3 
+ {
+position: relative
+}
+.about-h3::before,
+.single-h3::before
+{
+  content: '';
+  width: 56px;
+  height: 1px;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  background-color: #276BAA;
+}
+.project-header a:hover h3 {
+  color: #276BAA;
+}
+.project-title {
+color: #000;
+}
+
+
+h4 {
+  font-size: 1.2rem;
+  text-align: left;
+}
+h2,h3,h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.works-wrapper {
+display: flex;
+gap:30px;
+width: 100%;
+max-width: 100%;
+margin: 0 auto;
+}
+.project-screenshot {
+  max-width: 300px;
+  display: block;
+}
+.works-contents {
+width: 100%;
+}
+.profile-image > img {
+  width: 400px;
+max-width: 100%;
+height: auto;
+}
+.profile-image {
+max-width: 300px;
+}
+.project-header a:hover,
+.h3-hover:hover {
+  opacity:0.6;
+	transition:0.3s;
+}
+.single-works {
+text-align: center;
+}
+.about-innner-wrapper {
+  display: flex;
+  }
+  .about-massage {
+  text-align: left;
+  }
+@media screen and (max-width:768px) {
+  .works-wrapper {
+    display: block;
+  }
+  .project-screenshot-figure {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+
+  }
+  .project-screenshot-link {
+    display: block;
+    text-align: center;
+}
+
+.project-screenshot-figure {
+    margin: 0;
+}
+
+.project-screenshot {
+    max-width: 80%;
+    margin: 0 auto;
+    height: auto;
+} 
+.about-innner-wrapper {
+display: block;
+}
+.profile-image img {
+  object-fit: contain;
+  object-position: center; /* 画像を中央に配置 */
+}
+}
+.list-1 {
+  list-style-type: disc;
+  padding: 1em 1em 1em 2.5em;
+  border: 2px solid #276BAA;
+  border-radius: 8px;
+}
+
+.list-1 li {
+  padding: .3em .3em .3em 0;
+}
+
+.list-1 li::marker {
+  color: #276BAA;
+  font-size: 1.1em;
+}
+.main-view {
+width: 100vw;
+display: flex;
+justify-content: space-between;
+}
+
+.main-text {
+position: absolute;
+top:30%;
+right:30%;
+font-size: 1.3rem;
+background-color: rgba(221, 221, 221, 0.5); /* 透過性を追加 */
+height: 6rem;
+padding: 1rem;
+margin: 0;
+display: flex;
+align-items: center;
+border-radius: 0 0 8px 0;
+}
+@media screen and (max-width:576px) {
+  .main-text {
+   top:35%;
+   right: 40%;
+  }
+}
+@media screen and (max-width:404px) {
+  .main-text {
+   font-size: 16px;
+   top:30%;
+   right: 30%;
+  }
+}
+.main-img {
+position: relative;
+width: 60%;
+margin: 0;
+height: 40vh;
+}
+.main-img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 8px 0;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  background-color: #276BAA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 200px;
+}
+
+button[type="submit"]:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ホバー時の影を追加 */
+  transform: translateY(-2px); /* わずかに上に移動させる効果 */
+}
+
+.required {
+  color: red;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.full-width-bg {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 40px 0;
+}
+#contact-bg,
+#works-bg {
+  background-color: #EDF2F7; 
+}
+
+#works, #contact {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#contact .contact-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 他のセクションの幅を調整 */
+section:not(#works):not(#contact) {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
