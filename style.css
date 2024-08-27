@@ -290,12 +290,32 @@ position: relative
 .project-title {
 color: #000;
 }
-
-
 h4 {
   font-size: 1.2rem;
-  text-align: left;
+  text-align: center;
 }
+.eng::before {
+position: relative;
+content: "";
+display: inline-block;
+top:15px;
+left: 28px;
+width: 4px;
+height: 4px;
+background-color: #276BAA;
+border-radius: 3px;
+}
+.eng-2::before {
+  position: relative;
+  content: "";
+  display: inline-block;
+  top:16px;
+  left: 40px;
+  width: 4px;
+  height: 4px;
+  background-color: #276BAA;
+  border-radius: 3px;
+  }
 h2,h3,h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
