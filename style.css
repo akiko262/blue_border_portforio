@@ -148,7 +148,6 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
   gap: 1rem;
-  padding: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -172,7 +171,7 @@ align-self: center; /
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
-    padding: 10px;
+    padding: 10px 0;
 }
 .grid-item {
     padding: 20px;
@@ -185,17 +184,13 @@ word-break: break-all;
 }
 footer {
  height: 30px;
- position: fixed;
- bottom: 0;
- left: 0;
  width: 100%;
- padding: 20px;
+ padding: 20px 0;
  text-align: center;
 }
 .footer-copy {
 font-size: 0.7rem;
 color: #276BAA;
-padding: 15px 0 0 0;
 }
 .footer-innner {
 text-align: center;
@@ -432,66 +427,57 @@ height: 40vh;
   height: 100%;
   border-radius: 0 0 8px 0;
 }
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
 }
-
-.form-group {
+.wpcf7-form .form-group {
   margin-bottom: 20px;
 }
-
-label {
-  display: block;
-  margin-bottom: 5px;
+.form-group {
+  display: flex;
+  text-align: center;
 }
-
-input[type="text"],
-input[type="email"],
-textarea {
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
 }
-
-textarea {
+.wpcf7-form textarea {
   height: 150px;
 }
-
-button[type="submit"] {
-  background-color: #276BAA;
-  color: white;
+/* form 内の最後の <p> タグを中央寄せ */
+form p:last-of-type {
+  text-align: center; /* 中央寄せ */
+  margin: 0 auto; /* デフォルトのマージンをリセット */
+}
+.wpcf7-submit {
+  width: 300px; /* ボタンの幅を設定 */
+  background-color: #0073aa;
+  color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 200px;
-}
-
-button[type="submit"]:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ホバー時の影を追加 */
-  transform: translateY(-2px); /* わずかに上に移動させる効果 */
-}
-
-.required {
-  color: red;
-}
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: inline-block; /* ボタンをインラインブロックに設定 */
 }
 
-
-.full-width-bg {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding: 40px 0;
+[type="submit"] {
+  width: 100%;
+  margin: 0 auto;
+  height: 50px;
+  background-color: #0073aa;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.required {
+  color: #BA274A;
 }
 #contact-bg,
 #works-bg {
@@ -501,7 +487,6 @@ button[type="submit"]:hover {
 #works, #contact {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 #contact .contact-form {
   background-color: #ffffff;
@@ -514,5 +499,4 @@ button[type="submit"]:hover {
 section:not(#works):not(#contact) {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 40px 20px;
 }

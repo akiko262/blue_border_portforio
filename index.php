@@ -124,23 +124,7 @@
     <div class="full-width-bg" id="works-bg">
         <section id="contact" data-aos="fade-right">
         <h2>Contact</h2>
-        <form action="#" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="name">お名前 <span class="required">*</span></label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">メールアドレス <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">お問い合わせ内容 <span class="required">*</span></label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit">送信</button>
-            </div>
-        </form>
+        <?php echo do_shortcode('[contact-form-7 id="c5ce14f" title="Contact"]'); ?>
     </section>
     </div>
 </main>
