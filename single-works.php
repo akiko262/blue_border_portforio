@@ -52,6 +52,20 @@
                             </ul>
                         </div>
                         <?php
+// GitHubリンクのURLを取得
+$github_link = get_field('github_link');
+
+// GitHubリンクが設定されているか確認
+if ($github_link) {
+    // リンクが設定されている場合
+    echo '<p><a href="' . esc_url($github_link) . '" target="_blank">GitHubでコードを見る</a></p>';
+} else {
+    // リンクが設定されていない場合
+    echo '<p>GitHubリンクはありません。</p>';
+}
+?>
+
+                        <?php
 // 詳細を表示
 $detail = get_field('detail');  // "detail" はフィールド名
 if ($detail) {
@@ -107,6 +121,20 @@ if ($study) {
             </article>
         <?php endwhile; ?>
     <?php endif; ?>
+<!-- ページネーション -->
+<?php if (have_posts()) : ?>
+    <div class="posts">
+        <?php while (have_posts()) : the_post(); ?>
+            <!-- 投稿の表示 -->
+        <?php endwhile; ?>
+    </div>
+
+    <!-- カスタムページネーションの表示 -->
+    <?php custom_pagination(); ?>
+<?php else : ?>
+    <!-- 投稿がない場合の表示 -->
+<?php endif; ?>
+
 </main>
 
 <?php get_footer(); ?>

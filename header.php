@@ -18,7 +18,7 @@
         <nav>
             <ul class="header-nav-ul">
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#works">Works</a></li>
+                <li><a href="/works">Works</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>

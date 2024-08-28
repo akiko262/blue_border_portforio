@@ -19,3 +19,43 @@ function blue_border_enqueue_scripts() {
     wp_enqueue_script('custom-script', get_template_directory_uri() . '/script.js', array('aos-js'), '1.0.0', 'all',100);
 }
 add_action('wp_enqueue_scripts', 'blue_border_enqueue_scripts');
+
+// ページネーション
+function custom_pagination($paged = '', $max_page = '') {
+    if (!$paged) {
+        $paged = get_query_var('paged');
+    }
+    if (!$max_page) {
+        global $wp_query;
+        $max_page = $wp_query->max_num_pages;
+    }
+
+    if ($max_page <= 1) return; // 1ページしかない場合、ページネーションを表示しない
+
+    echo '<ol class="pagination-3">';
+    
+    // 前のページ
+    if ($paged > 1) {
+        echo '<li class="prev"><a href="' . get_pagenum_link($paged - 1) . '"><</a></li>';
+    } else {
+        echo '<li class="prev disabled"><span><</span></li>';
+    }
+    
+    // ページ番号のループ
+    for ($i = 1; $i <= $max_page; $i++) {
+        if ($i == $paged) {
+            echo '<li class="current"><a href="#">' . $i . '</a></li>';
+        } else {
+            echo '<li><a href="' . get_pagenum_link($i) . '">' . $i . '</a></li>';
+        }
+    }
+    
+    // 次のページ
+    if ($paged < $max_page) {
+        echo '<li class="next"><a href="' . get_pagenum_link($paged + 1) . '">></a></li>';
+    } else {
+        echo '<li class="next disabled"><span>></span></li>';
+    }
+
+    echo '</ol>';
+}

@@ -81,6 +81,7 @@ h2 {
     color: #276BAA;
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
+    text-align: center;
 }
 /* Card container */
 .card {
@@ -216,7 +217,7 @@ justify-content: space-between;
   border-bottom: 2px solid #d0d0d0;
 }
 .fa-brands  {
-  color: #276BAA;
+  color: #002246;
 }
 .accordion-003 summary {
   display: flex;
@@ -267,12 +268,14 @@ h3 {
   text-align: center;
 }
 .about-h3,
-.single-h3 
+.single-h3,
+.archive_h3
  {
 position: relative
 }
 .about-h3::before,
-.single-h3::before
+.single-h3::before,
+.archive_h3::before
 {
   content: '';
   width: 56px;
@@ -305,17 +308,39 @@ height: 4px;
 background-color: #276BAA;
 border-radius: 3px;
 }
-.eng-2::before {
+.eng-3::before {
   position: relative;
   content: "";
   display: inline-block;
-  top:16px;
-  left: 40px;
+  top:23px;
+  left: 75px;
   width: 4px;
   height: 4px;
   background-color: #276BAA;
   border-radius: 3px;
   }
+  .eng-2::before {
+      position: relative;
+      content: "";
+      display: inline-block;
+      top:16px;
+      left: 40px;
+      width: 4px;
+      height: 4px;
+      background-color: #276BAA;
+      border-radius: 3px;
+      }
+  .eng-4::before {
+    position: relative;
+      content: "";
+      display: inline-block;
+      top:16px;
+      left: 34px;
+      width: 4px;
+      height: 4px;
+      background-color: #276BAA;
+      border-radius: 3px;
+      }
 h2,h3,h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -473,6 +498,7 @@ height: 40vh;
 form p:last-of-type {
   text-align: center; /* 中央寄せ */
   margin: 0 auto; /* デフォルトのマージンをリセット */
+  width: 250px;
 }
 .wpcf7-submit {
   width: 300px; /* ボタンの幅を設定 */
@@ -488,7 +514,7 @@ form p:last-of-type {
 [type="submit"] {
   width: 100%;
   margin: 0 auto;
-  height: 50px;
+  height: 40px;
   background-color: #0073aa;
   color: #fff;
   padding: 10px 20px;
@@ -519,4 +545,168 @@ form p:last-of-type {
 section:not(#works):not(#contact) {
   max-width: 1000px;
   margin: 0 auto;
+}
+/* ページネーション */
+.pagination-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 8px;
+  list-style-type: none;
+  padding: 0;
+  margin: 20px;
+}
+
+.pagination-3 a {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  border-bottom: 2px solid #f2f2f2;
+  color: #333;
+  text-decoration: none;
+}
+
+.pagination-3 .current a {
+  border-bottom: 2px solid #276BAA;
+  pointer-events: none;
+}
+
+
+/* アーカイブページのスタイル */
+.archive-works {
+  padding: 20px;
+}
+
+.archive-works h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.single-works {
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.single-works h2 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-summary {
+  margin: 10px 0;
+}
+
+.project-details {
+  margin: 10px 0;
+}
+.skill-list li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.pagination {
+  text-align: center;
+  margin: 20px 0;
+}
+.pagination a,
+.pagination span {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  color: #276BAA;
+  text-decoration: none;
+}
+.pagination .current {
+  background-color: #276BAA;
+  color: #fff;
+}
+/* 詳細ボタンデザイン */
+.button a {
+  padding-top: 5px;
+  height: 35px;
+  font-weight: 100;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block;
+  max-width: 250px;
+  background: #276BAA;
+  margin: 20px auto;
+  text-align: center;
+  line-height: 1.8;
+  outline: none;
+  transition: ease .2s;
+  color: #fff;
+}
+.button a span {
+  position: relative;
+  z-index: 3;
+}
+
+.button a:hover span{
+  color:#fff;
+}
+
+.bgskew::before {
+content: '';
+position: absolute;
+top: 0;
+left: -130%;
+background:#002246;
+width:120%;
+height: 100%;
+transform: skewX(-25deg);
+color: #d0d0d0;
+}
+
+.bgskew:hover::before {
+animation: skewanime .5s forwards;
+}
+
+@keyframes skewanime {
+100% {
+  left:-10%;
+}
+}
+/* thanksページ */
+.thank-you-container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px;
+  
+  width: 100%;
+}
+
+.thank-you-container p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.thank-you-container .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007BFF;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.thank-you-container .btn:hover {
+  background-color: #0056b3;
 }
