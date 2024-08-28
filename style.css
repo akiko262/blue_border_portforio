@@ -34,6 +34,25 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px; /* 最大幅を指定（必要に応じて変更） */
+  margin: 0 auto; /* 中央寄せ */
+  padding: 10px 20px; /* パディングを追加 */
+}
+
+.header-nav-ul {
+  list-style: none; /* デフォルトのリストスタイルを削除 */
+  padding: 0;
+  margin: 0;
+  display: flex; /* ナビゲーションをフレックスボックスで並べる */
+}
+
+.header-nav-ul li {
+  margin-right: 20px; /* リストアイテムの間にマージンを追加 
+
 .header-inner{
 max-width: 80%;
 /* 中央寄せにしたいときはmargin-leftとmargin-rightをautoにする */
@@ -709,4 +728,50 @@ animation: skewanime .5s forwards;
 
 .thank-you-container .btn:hover {
   background-color: #0056b3;
+}
+
+/* footerを最下部に */
+/* single-worksページ専用のスタイル */
+.project-detail {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ビューポート全体の高さ */
+}
+
+.project-detail .posts,
+.project-detail .single-works {
+  flex: 1; /* 残りのスペースを埋める */
+}
+
+/* フッターを最下部に固定 */
+footer {
+  margin-top: auto;
+}
+/* 404 */
+.error-404 {
+  text-align: center;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+.error-title {
+  margin: 0;
+  z-index: 50;
+}
+.error-message {
+  margin: 1rem 0;
+  color: #000;
+}
+
+.error-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0073aa;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.error-link:hover {
+  background-color: #002246;
 }
