@@ -53,44 +53,41 @@
         </div>
     </section>
     <div class="full-width-bg" id="works-bg">
+        <!-- カスタム投稿から投稿内容を抜粋 -->
         <section id="works">
-        <h2>Works</h2>
-        <div class="grid-container" data-aos="fade-right">
+    <h2>Works</h2>
+    <div class="grid-container" data-aos="fade-right">
+        <?php
+        $args = array(
+            'post_type' => 'works', // カスタム投稿タイプ「works」
+            'posts_per_page' => -1,  // 全ての投稿を表示
+        );
+        $works_query = new WP_Query($args);
+        if ($works_query->have_posts()) :
+            while ($works_query->have_posts()) : $works_query->the_post();
+                // リンクのURLを取得
+                $work_url = get_permalink();
+        ?>
             <div class="grid-item">
-                <a href="http://blue-border.lovepop.jp/flowershop/"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/Samira.png" alt=""></a>
-                <p>（サンプル）Samira-flowershop</p>
-            </div>
-            <div class="grid-item">
-                <a href="http://blue-border.lovepop.jp/blue-border-portforio/">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/blue-border-portforio.png" alt="">
+                <a href="<?php echo esc_url($work_url); ?>">
+                    <?php 
+                    if (has_post_thumbnail()) {
+                        the_post_thumbnail('medium'); // 投稿に設定されたサムネイルを表示
+                    } else {
+                        // 画像が設定されていない場合のデフォルト画像
+                        echo '<img src="' . esc_url(get_template_directory_uri()) . '/imgs/default-image.png" alt="Default Image">';
+                    }
+                    ?>
                 </a>
-                <p>blue-border-portforio</p>
+                <p><?php the_title(); ?></p>
             </div>
-            <div class="grid-item">
-                <a href="http://blue-border.lovepop.jp/umitsukikan/"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/umitsukikan.png" alt=""></a>
-                <p>（サンプル）海月館</p>
-            </div>
-            <div class="grid-item">
-                <a href="http://blue-border.lovepop.jp/samurai-web-biz-test/"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/fukuoka-zeirisi.png" alt=""></a>
-                <p>福岡税理士事務所</p>
-            </div>
-            <div class="grid-item">
-                <a href="http://blue-border.lovepop.jp/nozomi-visiting-nurse/"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/nozomiVisitingNurce.png" alt=""></a>
-                <p><p>(サンプル)のぞみ訪問看護ステーション</p></div>
-            <div class="grid-item">
-                <a href="http://blue-border.lovepop.jp/Happy-trimming-Salon/"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/trimingsalon.png" alt=""></a>
-                <p>(サンプル)happytrimingsalon</p>
-            </div>
-            <div class="grid-item">
-                <a href="http://blue-border.lovepop.jp/strawberryparadisefarm/"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/starawberryParadiceFarm.png" alt=""></a>
-                <p>(サンプル)starawberryParadiceFarm</p>
-            </div>
-            <div class="grid-item">
-                <a href="http://blue-border.lovepop.jp/sneakers/"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/sneakers.png" alt=""></a>
-                <p>（サンプル）Sneakers</p>
-            </div>
-</div>
-    </section>
+        <?php
+            endwhile;
+            wp_reset_postdata();
+        endif;
+        ?>
+    </div>
+</section>
     </div>
     <section id="about">
         <h2>About</h2>
@@ -103,7 +100,7 @@
               <p>前職では、長年看護師としての医療業務に従事しておりました。</p> 
               <p>その経験から『相手に寄り添う』ことの本質を日々追及し、患者様、医療スタッフ、そして家族との深い信頼関係を築いてきました。</p> 
               この貴重な経験をWeb制作の世界に活かし、
-              クライアント様とそのお客様の声に真摯に耳を傾け、ニーズを的確に捉えたサイト制作を心がけております。技術力はもちろん、人間力を大切にしたコーディングで、心に響くWebサイトを作り上げます。</p>
+              クライアント様とそのお客様の声を真摯に受け止め、その背景を熟考し、ニーズを的確に捉えた制作を心がけます。技術力はもちろん、人間力を大切にしたコーディングで、心に響くWeb製作のお手伝いがきればと考えています。</p>
               <P>好きなこと：ヨガ、読書、自転車で近所のカフェ、パン屋さん巡り、地元愛知県、在住の福岡市、<br>糸島の海</P>
               <h3 class="about-h3">対応時間について</h3>
               <h4 class="eng-3">稼働時間について</h4>

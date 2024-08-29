@@ -17,9 +17,9 @@
     </a>
         <nav>
             <ul class="header-nav-ul">
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="<?php echo home_url(); ?>/#skills">Skills</a></li>
                 <li><a href="/works">Works</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="<?php echo home_url(); ?>/#about">About</a></li>
                 <li><a href="<?php echo home_url(); ?>/#contact">Contact</a></li>
             </ul>
         </nav>

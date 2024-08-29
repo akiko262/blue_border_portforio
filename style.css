@@ -248,11 +248,9 @@ justify-content: space-between;
   font-weight: 600;
   cursor: pointer;
 }
-
 .accordion-003 summary::-webkit-details-marker {
   display: none;
 }
-
 .accordion-003 summary::after {
   transform: translateY(-25%) rotate(45deg);
   width: 7px;
@@ -263,11 +261,9 @@ justify-content: space-between;
   content: '';
   transition: transform .3s;
 }
-
 .accordion-003[open] summary::after {
   transform: rotate(225deg);
 }
-
 .accordion-003 p {
   transform: translateY(-10px);
   opacity: 0;
@@ -276,10 +272,12 @@ justify-content: space-between;
   color: #333333;
   transition: transform .5s, opacity .5s;
 }
-
 .accordion-003[open] p {
   transform: none;
   opacity: 1;
+}
+.accordion-003 > ul {
+  text-align: left;
 }
 h3 {
   padding:0 .4em .2em;

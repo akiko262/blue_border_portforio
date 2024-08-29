@@ -48,14 +48,6 @@
                             <?php endforeach; ?>
                         </ul>
                     <?php endif; ?>
-
-                    <?php
-                    // 詳細の表示
-                    $detail = get_field('detail');
-                    if ($detail) : ?>
-                        <h4 class="eng-4">Details</h4>
-                        <p><?php echo esc_html($detail); ?></p>
-                    <?php endif; ?>
                 </div>
                 <div class="button"><a href="<?php the_permalink(); ?>" class="bgskew"><span>詳　細</span></a></div>
             </article>
