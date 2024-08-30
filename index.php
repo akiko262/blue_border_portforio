@@ -96,7 +96,7 @@
             <figure class="profile-image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/imgs/アイコン.png"></figure>
             <div class="about-massage">
               <h3 class="about-h3">メッセージ</h3>
-              <p>はじめまして。webコーダーのakikoと申します。現在web製作のコーディング業務に従事しております。</p>
+              <p>はじめまして。コーダーのakikoと申します。現在web製作のコーディング業務に従事しております。</p>
               <p>前職では、長年看護師としての医療業務に従事しておりました。</p> 
               <p>その経験から『相手に寄り添う』ことの本質を日々追及し、患者様、医療スタッフ、そして家族との深い信頼関係を築いてきました。</p> 
               この貴重な経験をWeb制作の世界に活かし、

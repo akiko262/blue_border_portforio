@@ -28,13 +28,138 @@ body {
 filter {
     margin: 0;
 }
-
-/* イメージのおまじない */
 img {
     max-width: 100%;
     height: auto;
 }
-
+#navArea {
+  display: none;
+}
+/* ハンバーガーメニュー */
+@media screen and (max-width:768px){
+  #navArea {
+    display: block;
+  }
+/*============
+nav
+=============*/
+nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  bottom: 0;
+  width: 300px;
+  background: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: all .5s;
+  z-index: 3;
+  opacity: 0;
+}
+.open nav {
+  left: 0;
+  opacity: 1;
+}
+nav .inner {
+  display: block;
+  padding: 25px;
+}
+nav .inner ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav .inner ul li {
+  position: relative;
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+nav .inner ul li a {
+  display: block;
+  color: #276BAA;
+  font-size: 14px;
+  padding: 1em;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+nav .inner ul li a:hover {
+  background: #e4e4e4;
+}
+@media screen and (max-width: 767px) {
+  nav {
+    left: -220px;
+    width: 220px;
+  }
+}
+/*============
+.toggle_btn
+=============*/
+.toggle_btn {
+  display: block;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  width: 40px;
+  height: 30px;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 3;
+}
+.toggle_btn span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all .5s;
+}
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+/*============
+#mask
+=============*/
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 2;
+  cursor: pointer;
+}
+}
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -52,9 +177,6 @@ img {
 
 .header-nav-ul li {
   margin-right: 20px; /* リストアイテムの間にマージンを追加 
-
-.header-inner{
-max-width: 80%;
 /* 中央寄せにしたいときはmargin-leftとmargin-rightをautoにする */
 margin-left: auto;
 margin-right: auto;

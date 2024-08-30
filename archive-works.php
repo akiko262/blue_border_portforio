@@ -8,7 +8,7 @@
     // カスタムクエリの設定
     $args = array(
         'post_type' => 'works', // カスタム投稿タイプ
-        'posts_per_page' => 10, // 1ページあたりの表示投稿数
+        'posts_per_page' => 3, // 1ページあたりの表示投稿数
         'paged' => $paged,     // ページネーションの設定
     );
 
@@ -18,7 +18,10 @@
         while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
             <article class="single-works" data-aos="fade-right" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <h3 class="archive_h3"><?php the_title(); ?></h3>
-                <a class="project-screenshot-link" href="<?php the_permalink(); ?>">
+                <?php 
+                $project_screenshot_link = get_field('project_screenshot_link'); 
+                ?>
+                <a class="project-screenshot-link" href="<?php echo esc_url($project_screenshot_link); ?>">
                     <?php if (has_post_thumbnail()) : ?>
                         <?php the_post_thumbnail('large', array('class' => 'project-thumbnail')); ?>
                     <?php endif; ?>
