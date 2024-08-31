@@ -16,7 +16,7 @@
 
     if ($custom_query->have_posts()) :
         while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-            <article class="single-works" data-aos="fade-right" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <article class="single-works" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <h3 class="archive_h3"><?php the_title(); ?></h3>
                 <?php 
                 $project_screenshot_link = get_field('project_screenshot_link'); 

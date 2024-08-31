@@ -7,7 +7,7 @@
     </div>
     <section id="skills">
         <h2>Skills</h2>
-        <div class="card-container" data-aos="fade-left">
+        <div class="card-container">
             <div class="card">
                 <i class="fa-brands fa-html5 fa-8x custom-icon"></i>
                 <div class="card__content">
@@ -56,7 +56,7 @@
         <!-- カスタム投稿から投稿内容を抜粋 -->
         <section id="works">
     <h2>Works</h2>
-    <div class="grid-container" data-aos="fade-right">
+    <div class="grid-container">
         <?php
         $args = array(
             'post_type' => 'works', // カスタム投稿タイプ「works」
@@ -119,7 +119,7 @@
         </div>
     </section>
     <div class="full-width-bg" id="works-bg">
-        <section id="contact" data-aos="fade-right">
+        <section id="contact">
         <h2>Contact</h2>
         <?php echo do_shortcode('[contact-form-7 id="c5ce14f" title="Contact"]'); ?>
     </section>

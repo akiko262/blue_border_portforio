@@ -18,3 +18,35 @@ AOS.init();
       $nav.removeClass( open );
     });
   } )(jQuery);
+
+// skillのアニメーション
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.card');
+  let animationStarted = false;
+
+  function showCard(card) {
+      card.classList.add('show');
+  }
+
+  function checkCards() {
+      cards.forEach((card) => {
+          const cardTop = card.getBoundingClientRect().top;
+          const cardBottom = card.getBoundingClientRect().bottom;
+          const windowHeight = window.innerHeight;
+
+          if (cardTop < windowHeight && cardBottom > 0 && !card.classList.contains('show')) {
+              showCard(card);
+          }
+      });
+  }
+  function startAnimation() {
+    if (!animationStarted) {
+        animationStarted = true;
+        window.addEventListener('scroll', checkCards);
+        checkCards(); // 初期チェック
+    }
+}
+
+// スクロールが始まったらアニメーションを開始
+window.addEventListener('scroll', startAnimation, { once: true });
+});
